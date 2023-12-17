@@ -42,5 +42,17 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-/* app.css */
-@import url('https://static.parastorage.com/unpkg/@wix/wix-fonts@1.11.0/madefor.css');
+.root_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div_sizer {
+  width: 80%;
+}
+@media screen and (max-width: 1280px) {
+  .div_sizer {
+    width: 90%;
+  } 
+}

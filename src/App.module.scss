@@ -1,2 +1,10 @@
+.navbar {
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
 
-
+.hero {
+    position: relative;
+    top: -170px;
+}
