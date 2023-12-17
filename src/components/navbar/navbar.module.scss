@@ -1,0 +1,119 @@
+@media screen and (min-width: 1024px) {
+
+    .navbar-default {
+        width: 100%;
+        min-width: 75%;
+        max-width: 100%;
+        padding-top: 0px;
+        padding-bottom: 20px;
+        background-color: #000000;
+        box-shadow: 0.84px 0.54px black;
+        box-shadow: 0.87px 0.48px black;
+        box-shadow: 0 2px 9px black;
+        color: #FFFFFF;
+        height: 150px;
+        position: relative;
+        left: 0px;
+        overflow: visible;
+        align-items: center;
+        justify-items: center;
+        text-align: start;
+        margin: 0px;
+    }
+
+    .brown_cta {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        width: 150px;
+        height: 50px;
+        border-radius: 8px;
+        margin: 60px 30px 60px 3px;
+        background-color: #471B1B;
+        color: #FFFFFF;
+        font-family: mo;
+        font-size: 24px;
+        text-align: center;
+        padding: 0em;
+    }
+
+    .logo_image {
+        display: inline-block;
+        text-align: center;
+        width: 192px;
+        height: 50%;
+        margin: 0%;
+        padding: 37.5px;
+        position: absolute;
+    }
+
+    .navbar_middle {
+        display: inline-block;
+        height: 100%;
+        text-align: center;
+        position: absolute;
+        background-color: rgba(196, 159, 159, 0);
+        margin-left: 270px;
+        align-self: center;
+        margin-top: 0px;
+        margin-right: 210px;
+        width: 1070px;
+    }
+
+
+
+
+
+    * {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .horizontal_divider {
+        color: #471B1B;
+        width: 90%;
+    }
+
+    // THis is the styling for the navbar_middle and all of the components within it
+    // You do not need to edit it in any way 
+    // and the styling for this only applies above 1920
+    .navbar_middle_address {
+        padding-right: 0px;
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+
+    .navbar_middle_links {
+        height: 45%;
+    }
+
+    .navbar_link_buttons {
+        height: 37px;
+        width: 150px;
+        margin: 12px 30px 20px;
+        background-color: #000000;
+        color: #FFFFFF;
+        font-size: 20px;
+        line-height: 1.5;
+        padding: 0em;
+        border: 0px solid rgb(100, 108, 255);
+
+        &:hover {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+    }
+
+    .brown_headeer_text {}
+
+    .brown_header_text {
+        font-size: 25px;
+        font-weight: 200;
+        color: #E5C3C3;
+        margin: 20px;
+        background-color: 471B1B;
+    }
+}
+
+@media screen and (max-width: 1024px) {}
+
+.text-align-center {}
