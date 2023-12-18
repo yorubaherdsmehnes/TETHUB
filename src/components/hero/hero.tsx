@@ -13,7 +13,7 @@ export interface HeroProps {
 
 export const Hero = ({ className }: HeroProps) => {
     return <div className={classNames(styles.root, className)}>
-        <div className={styles.grey_div}>
+        <div className="grey_div">
             <div className="root_container">
                 <div className="div_sizer">
                     <div className={styles.hero_div}>
@@ -23,8 +23,9 @@ export const Hero = ({ className }: HeroProps) => {
                                 <h5 className={styles.hero_header_text_title}>We are Civil Suites</h5>
                                 <h1 className={styles.hero_header_text_subtitle}>INNOVATIVE DESIGNS</h1>
                                 <h1 className={classNames(styles.light, styles.hero_header_text_subtitle)}>WORLD CLASS ARCHITECTURE</h1>
-                                <Cta_div />
-                            </div>
+                                <div>
+                                    <Cta_div />
+                                </div></div>
                             <div className={styles.hero_title_background} />
                         </div>
                     </div></div></div>

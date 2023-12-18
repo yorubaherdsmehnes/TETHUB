@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import styles from './home.module.scss';
 import { Hero } from '../hero/hero';
+import { Features } from '../features/features';
 
 export interface HomeProps {
     className?: string;
@@ -14,5 +15,6 @@ export interface HomeProps {
 export const Home = ({ className }: HomeProps) => {
     return <div className={classNames(styles.root, className)}>
         <Hero />
+        <Features />
     </div>;
 };

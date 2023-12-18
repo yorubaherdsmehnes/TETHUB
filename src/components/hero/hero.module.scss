@@ -23,6 +23,8 @@
     &:hover {
         box-shadow: 0 0 40px -2px #3b2a2a;
     }
+
+    position:absolute;
 }
 
 .hero_titles_div {
@@ -39,10 +41,11 @@
     position: absolute;
     right: 0px;
     justify-content: end;
+    margin-left: 40px;
 }
 
 .hero_header_text_subtitle {
-    font-size: 3.2rem;
+    font-size: 2vw;
     margin: 2px;
 }
 
@@ -59,16 +62,14 @@
 
 .grey {}
 
-.grey_div {
-    background-color: #dcdad8;
-    width: 100vw;
-    height: 100vh;
-}
 
 .hero_title_background {}
 
 @media screen and (max-width: 1280px) {
-    .hero_div {}
+    .hero_div {
+        display: flex;
+        align-items: end;
+    }
 
     .hero_image {
         width: 100%;
@@ -90,10 +91,15 @@
     }
 
     .hero_titles_container {
-
         margin-right: 3vw;
 
+        h1 {
+            font-size: 6vw;
+        }
 
+        h5 {
+            font-size: 2vw;
+        }
     }
 
     .hero_header_text_subtitle {}
