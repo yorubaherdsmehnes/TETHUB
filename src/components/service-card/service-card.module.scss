@@ -1,2 +1,35 @@
-.root {
+.service_card {
+    width: 450px;
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 2.12px 2.12px 17px #33333399;
+}
+
+.service_card_title {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.service_card_image {
+    display: inline-block;
+    height: 350px;
+    position: absolute;
+    width: 400px;
+    bottom: 0px;
+    border: 25px solid #EFEFEF;
+}
+
+.service_card_title_div {
+    display: inline-block;
+    position: absolute;
+    font-size: 1.8rem;
+    top: 9%;
+}
+
+.service_card_image_div {
+    display: inline-block;
 }

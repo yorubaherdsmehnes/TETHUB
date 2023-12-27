@@ -1,17 +1,15 @@
 import classNames from 'classnames';
-import styles from './service-card.module.scss';
+import styles from './sevice-card.module.scss';
 
 
-export interface Service_CardProps {
+export interface Service_cardProps {
     className?: string;
     id?: number;
     name?: string;
     imgURL?: string;
 }
 
-
-
-function Service_Card({ className, id, name, imgURL }: Service_CardProps) {
+export const Sevice_card = ({ className, id, name, imgURL }: Service_cardProps, ) => {
     return (
         <div className={classNames(styles.root, className)}>
             <div className={styles.service_card}>
@@ -22,6 +20,4 @@ function Service_Card({ className, id, name, imgURL }: Service_CardProps) {
             </div>
         </div>
     );
-}
-
-export default Service_Card
+};

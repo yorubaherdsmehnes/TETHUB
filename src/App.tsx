@@ -3,6 +3,8 @@ import styles from './App.module.scss';
 import { Navbar } from './components/navbar/navbar';
 import { Footer } from './components/footer/footer';
 import { Home } from './components/home/home';
+import { Services } from './components/services/services';
+
 
 
 
@@ -13,6 +15,7 @@ function App() {
         <div className={styles.App}>
             <Navbar className={styles.navbar} />
             <Home className={styles.hero} />
+            <Services />
             <Footer />
         </div>
     );
