@@ -19,7 +19,6 @@ a:hover {
     color: #535bf2;
 }
 
-
 h1 {
     font-size: 3.2em;
     line-height: 1.1;
@@ -55,18 +54,52 @@ button:focus-visible {
     width: 80vw;
 }
 
+/* grey stuff */
 .grey_div {
-    background-color: #E6E4E2;
+    background-color: #e6e4e2;
+    overflow: hidden;
+    position: relative;
+}
+
+/* white stuff */
+.white_div {
+    background-color: #ffffff;
+}
+
+.grey_div,
+.white_div {
     width: 100vw;
-    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
 }
 
 .white_div {
-    background-color: #ffffff;
-    width: 100vw;
-    height: 100vh;
-    z-index: -2;
     position: relative;
+    background-color: #ffffff;
+}
+
+.white_background_text,
+.grey_background_text {
+    font-weight: 700;
+    position: absolute;
+    font-size: 450px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.087);
+    overflow: hidden;
+    width: auto;
+    left: auto;
+    right: -400px;
+}
+
+.white_background_text {
+    color: #ffffff;
+    bottom: -40px;
+    left: -300px;
+}
+
+.grey_background_text {
+    color: #e6e4e2;
+    bottom: -40px;
+    right: -300px;
 }
 
 .general_titles_div {
@@ -96,5 +129,11 @@ button:focus-visible {
 @media screen and (max-width: 640px) {
     .black_header {
         font-size: 10vw;
+    }
+
+    .white_background_text {
+        font-size: 450px;
+        bottom: -50px;
+        left: -1400px;
     }
 }

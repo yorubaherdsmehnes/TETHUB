@@ -4,7 +4,6 @@
 
 .features_div {
     height: 110vh;
-    margin-bottom: 300px;
     position: relative;
 }
 
@@ -49,16 +48,6 @@
     margin-bottom: 0px;
 }
 
-.white_background_text {
-    color: #FFFFFF;
-    font-weight: 700;
-    position: absolute;
-    font-size: 450px;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.087);
-    bottom: -40px;
-    left: -300px;
-}
-
 .paragraph {
     font-size: 1.5rem;
     margin: 40px 0px;
@@ -80,7 +69,9 @@
 @media screen and (max-width: 1280px) {
     .features_div {
         height: 150vh;
+        margin-bottom: 50vw;
     }
+
     .features_images {
         width: 100%;
         display: flex;
@@ -110,14 +101,7 @@
         margin-left: calc(45vw - 280px);
     }
 
-    .white_background_text {
-        color: #FFFFFF;
-        font-weight: 700;
-        position: absolute;
-        font-size: 450px;
-        bottom: -50px;
-        left: -1400px;
-    }
+
 
 
 }

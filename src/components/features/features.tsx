@@ -23,10 +23,9 @@ export const Features = ({ className }: FeaturesProps) => {
                             <h5 className={styles.brown_header}>Our Features</h5>
                             <h1 className={styles.bold_header}>We Make Finest Architectural Design With Great Passion</h1>
                             <p className={styles.paragraph}>Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi  quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.  Aenean faucibusnibh et justo cursus id  rutrum lorem imperdiet. Nunc ut sem vitae risus tristique .Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <span className={styles.white_background_text}>FEATURE</span>
-                    </div>
+                        </div></div>
                 </div>
+                <span className="white_background_text">FEATURE</span>
             </div>
         </div></div>;
 };

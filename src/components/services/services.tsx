@@ -21,8 +21,8 @@ export const Services = ({ className }: ServicesProps) => {
                         <h5 className="brown_header">Heading 5</h5>
                         <h1 className="black_header">Service We’re Offering  to Our Customers</h1>
                     </div>
-                    <Carousel />
-                </div>
+                    <Carousel /></div>
+                <span className="grey_background_text">SERVICES</span>
             </div>
         </div>
     </div>;
