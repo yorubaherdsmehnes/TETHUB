@@ -6,7 +6,7 @@ export default createBoard({
     Board: () => <Services />,
     isSnippet: true,
     environmentProps: {
-        windowWidth: 418,
-        windowHeight: 667
+        windowWidth: 1920,
+        windowHeight: 1080
     }
 });

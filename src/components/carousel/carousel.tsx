@@ -1,7 +1,8 @@
 import classNames from 'classnames';
 import styles from './carousel.module.scss';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-// import servicesSlides from './slides.json';
+// @ts-ignore
+import { servicesSlides } from '../slides.js';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -42,49 +43,58 @@ export const Carousel = ({ className }: CarouselProps) => {
         <div className={classNames(styles.root, className)}>
             <section className={styles.main_body}>
                 <div className={styles.swiper_div}>
-                    <Swiper
-                        // install Swiper modules
-                        modules={[Navigation, Pagination, Scrollbar, A11y]}
-                        spaceBetween={30}
-                        slidesPerView={2}
-                        loop={true}
-                        grabCursor={true}
-                        pagination={{
-                            clickable: true,
-                            dynamicBullets: true,
-                            dynamicMainBullets: 1,
-                        }}
-                        breakpoints={{
-                            // the page is wider than 0px
-                            0: {
-                                slidesPerView: 1,
-                            },
-                            // the page is wider than 640px
-                            640: {
-                                slidesPerView: 2,
-                            },
-                            // the page is wider than 1440px
-                            1440: {
-                                slidesPerView: 3,
-                            },
-                        }}
-                        onSwiper={(swiper) => console.log(swiper)}
-                        onSlideChange={() => console.log('slide change')}
-                    >
-                        {servicesSlides.map((servicesSlides) => (
-                            <SwiperSlide>
-                                <Sevice_card
-                                    name={servicesSlides.name}
-                                    imgURL={servicesSlides.imgURL}
-                                />
-                            </SwiperSlide>
-                        ))}
-                        
-                         <div className={styles.swiper_pagination}>
-                         </div>
-                    </ Swiper>
-                </div>
-                </section>
+                    <div className="div_sizer">
+                        <Swiper
+                            // install Swiper modules
+                            modules={[Navigation, Pagination, Scrollbar, A11y]}
+                            spaceBetween={30}
+                            loop={true}
+                            grabCursor={true}
+                            pagination={{
+                                clickable: true,
+                                dynamicBullets: true,
+                                dynamicMainBullets: 4,
+                                bulletClass: 'swiper-pagination-bullet',
+                            }}
+                            breakpoints={{
+                                // the page is wider than 0px
+                                0: {
+                                    slidesPerView: 1,
+                                },
+                                // the page is wider than 640px
+                                640: {
+                                    slidesPerView: 2,
+                                },
+                                // the page is wider than 1440px
+                                1440: {
+                                    slidesPerView: 3,
+                                },
+                            }}
+                            onSwiper={(swiper) => console.log(swiper)}
+                            onSlideChange={() => console.log('slide change')}
+                            style={{
+                                '--swiper-pagination-color': '#FFBA08',
+                                '--swiper-pagination-bullet-active-size': '100px',
+                                '--swiper-pagination-bullet-size': '20px',
+                                '--swiper-pagination-bullet-inactive-color': '#999999',
+                                '--swiper-pagination-bullet-inactive-opacity': '.5',
+                                '--swiper-pagination-bullet-horizontal-gap': '35px',
+                                '--swiper-pagination-bullet-active-border': '2px solid #000000',
+                            } as React.CSSProperties}
+                        >
+                            {servicesSlides.map((servicesSlides) => (
+                                <SwiperSlide>
+                                    <Sevice_card
+                                        name={servicesSlides.name}
+                                        imgURL={servicesSlides.imgURL}
+                                    />
+                                </SwiperSlide>
+                            ))}
+
+                            <div className={styles.swiper_pagination}></div>
+                        </Swiper>
+                    </div></div>
+            </section>
         </div>
     );
 };
