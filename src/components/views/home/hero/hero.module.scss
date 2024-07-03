@@ -1,0 +1,131 @@
+@import '../../../variables';
+
+// (Main) hero container
+.hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+
+  // background image slider styling
+  .hero_bg_image_div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 0;
+    z-index: 0;
+
+    // swiper styling
+    .swiper {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: -15px;
+
+      // images in the slider
+      img {
+        height: 101vh;
+        width: calc(100vh * 2.1);
+        object-fit: cover;
+        object-position: 100% 0;
+      }
+    }
+
+    // Phone Styling for the background image slider
+    @media screen and (max-width: $tablet) {
+      .swiper {
+        height: 100%;
+        width: 100%;
+        img {
+          width: calc(100vh * 1.78);
+          object-fit: cover;
+          object-position: 95% 0;
+        }
+      }
+    }
+  }
+
+  // Styling for the text in the Hero
+  .hero_title_div {
+    position: absolute;
+    padding: 50px;
+    font-size: 2.5rem;
+    font-weight: 790;
+    color: $white;
+    bottom: 20px;
+    z-index: 1;
+    
+    // TetHub logo
+    .tetHub_div {
+      width: 250px;
+      height: 100px;
+      background-color: $white;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      color: $blue;
+      font-size: 3rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+    
+    // Stylistic font
+    span {
+      font-size: 4rem;
+      font-weight: 300;
+      display: block;
+      letter-spacing: 2;
+      margin-bottom: -30px;
+      font-style: italic;
+      font-family: Merriweather, serif;
+    }
+
+    // Hero Call to Action
+    button {
+      margin-top: 50px;
+      border-radius: 20px;
+      background-color: $blue;
+      color: $white;
+      font-size: 1.5rem;
+      display: block;
+      &:hover {
+        border: inherit $blue;
+        background-color: $white;
+        color: $blue;
+      }
+    }
+
+  }
+
+  // Tablet Styling for the Hero text
+  @media screen and (max-width: $tablet) {
+    display: block;
+    align-items: center;
+    .hero_title_div {
+      font-size: 1.4rem;
+      padding: 15px;
+      .tetHub_div {
+        width: 170px;
+        height: 75px;
+        border-radius: 13px;
+        font-size: 2rem;
+      }
+      span {
+        font-size: 2.3rem;
+        margin-bottom: -20px;
+      }
+      button {
+        margin-top: 50px;
+        border-radius: 12px;
+        background-color: $blue;
+        color: $white;
+        font-size: 1.2rem;
+        display: block;
+      }
+    }
+  }
+}

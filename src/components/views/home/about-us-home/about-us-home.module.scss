@@ -1,0 +1,150 @@
+@import '../../../variables';
+
+.root {
+  display: flex;
+  align-items: center;
+}
+
+.image_div {
+  display: inline-block;
+  width: 50%;
+  height: 100vh;
+  z-index: 0;
+  order: 1;
+  position: relative;
+  .shadow {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    img {
+      width: 50vw;
+      height: 100%;
+      object-fit: cover;
+      object-position: 80% 0;
+      z-index: 0;
+    }
+    span {
+      visibility: hidden;
+      background-color: $white;
+      color: $black;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 6px;
+      padding: 5px 10px;
+      text-align: center;
+      position: absolute;
+      z-index: 10;
+      bottom: 50%;
+      left: 50%;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    &:hover {
+      span {
+        visibility: visible;
+        opacity: 1;
+      }
+      img {
+        transform: scale(0.99);
+      }
+    }
+  }
+}
+.text_div {
+  display: inline-flex;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  order: 2;
+  position: relative;
+  z-index: 1;
+  .info_div_container {
+    display: block;
+    .info_div {
+      display: block;
+      margin: auto;
+      padding-left: 50px;
+      h3 {
+        color: $blue;
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      p {
+        width: 80%;
+        color: $black;
+        margin-top: 0;
+        margin-bottom: 60px;
+        font-size: calc(0.8vw + 0.3rem);
+      }
+    }
+  }
+  .bg_SVG {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+    svg {
+      width: 50%;
+      height: 50%;
+      fill: #3e3e3ea2;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .root {
+    display: block;
+  }
+  .image_div {
+    display: block;
+    width: 100%;
+    height: auto;
+    order: 2;
+    .swiper {
+      width: 100%;
+      img {
+        width: 100%;
+        height: calc(100vw * 1.125);
+        object-fit: cover;
+        object-position: 80% 0;
+        margin-bottom: -10px;
+      }
+    }
+  }
+  .text_div {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: -50px;
+    order: 1;
+    padding-top: 50px;
+    .info_div_container {
+      width: 100%;
+      .info_div {
+        width: 80%;
+        padding: 0 20px;
+        h3{
+          font-size: calc( 2.7vw + 2rem);
+        }
+        p {
+          font-size: calc( 0.7vw + 0.7rem);
+          width: 95%;
+        }
+      }
+    }
+    .bg_SVG {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

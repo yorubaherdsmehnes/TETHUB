@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Architecture",
+        "imgURL": "src/assets/TET_images/Hero_img1.png"
+    },
+    {
+        "id": 2,
+        "name": "Construction",
+        "imgURL": "src/assets/TET_images/Hero_img2.png"
+    },
+    {
+        "id": 3,
+        "name": "Interior Design",
+        "imgURL": "src/assets/TET_images/Hero_img3.png"
+    }
+]

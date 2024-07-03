@@ -1,0 +1,109 @@
+@import '../../../variables';
+
+.root {
+  position: fixed;
+  z-index: 2;
+}
+
+.offcanvas_backdrop{
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  z-index: 2;
+  background-color: #182460a7;
+}
+.offcanvas {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 6;
+  overflow:visible;
+  transition: transform 5000 ease-in-out;
+  
+  .offcanvas_modal{
+    width: 80%;
+    height: 100%;    
+  }
+  .header {
+    height: 105px;
+    background-color: $blue;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+
+    .title {
+      color: $white;
+      display: inline-flex;
+      height: 50px;
+      width: calc(100vw - 200px);
+
+      .tetHub_div {
+        width: 125px;
+        height: 50px;
+        margin: auto 0;
+        background-color: $white;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        color: $blue;
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: calc($marginLeft/2);
+      }
+    }
+
+    .close_button {
+      display: inline-flex;
+      justify-content: end;
+      align-items: center;
+      width: 160px;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: 60px;
+        background-color: $white;
+        color: $blue;
+        font-size: 1.5rem;
+        margin-right: -10px;
+      &:hover{
+        background-color: $blue;
+        color: $white;
+        border: solid 2px $white;
+      }
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    height: calc(100vh - 105px);
+    padding: 20px 15px;
+    background-color: $white;
+    .navbar_buttons {
+      background-color: transparent;
+      color: $black;
+      margin: 0px 5px;
+      margin-bottom: 10px;
+      display: block;
+      &:hover {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+    hr {
+      border: 0;
+      height: 3px;
+      width: 49vw;
+      margin-left: 10px;
+      background-color: $blue;
+    }
+  }
+}
+
